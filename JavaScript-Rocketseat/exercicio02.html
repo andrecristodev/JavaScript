@@ -1,0 +1,25 @@
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    function pares(x, y) {
+        // código aqui
+        for (x; y > x; x++) {           
+            if ((x % 2) == 0)
+                mostra(x);
+        }
+    }
+    pares(31, 321);
+
+
+</script>

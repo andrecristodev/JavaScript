@@ -1,0 +1,53 @@
+ // canvas usado para criar fundos ou backgrounds estilo tela
+<canvas width="600" height="400"></canvas>
+        // tamanho do seu back door
+// parte javascript
+<script>
+    ///////////////////// VARIAVEL ////////////////////////////////
+   // variavel para definir um valor formato var x = valordesejado;
+    var x = 20;
+    // function usado para dar uma funcao 
+    function funcao(variaveisusadasnobloco) {  // dentro do bloco
+       // pincel usado para pintar ou definir a cor
+        pincel.beginPath();
+                   // x, y, raio  // variaveis usadas no bloco
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    } // fechamento do bloco
+
+    // valor da variavel X alterada porque ja existe uma variavel a cima declarada como X
+    x = 0 
+          // variavel x (valor do x(0) maior  a 600 ? se nao ele criara o loop)
+    while(x < 600) { // while syntax uma expressao avaliada antes de qualquer passagem se for avaliada como true a rotina e executada
+ // condição for avaliada como false, a execução continua na declaração depois do laço while.
+        desenhaQuadrado(x, 0, 'green');
+        x = x + 50;
+    }
+         // formato mais compacto que o acima no qual preve  o uso do (FOR) DECLARANDO for (variavel x = 0; x maior que 600; x = x + 50 valor antes usado dentro do bloco agora pelo for e usado na primeira linha antes de abertura do bloco )
+    for (var x = 0; x < 600; x = x + 50) {
+        desenhaQuadrado(x, 0, 'green'); 
+    }
+
+
+///////////////////// FUNCAO /////////////////////////////////
+    function leDoTeclado(evento) { // inicio do bloco
+
+        // sua l�gica vir� aqui
+        if (evento.keyCode == cima) { // abertura do bloco secundario
+
+            y = y - taxa;
+          //  else if usado para adicionar outro if assim ficando mais compacto (tipo uma mesclagem)
+        } else if (evento.keyCode == baixo) {  // evento variavel usada do bloco da funcao.
+
+            y = y + taxa; 
+
+        } else if (evento.keyCode == esquerda) { // evento "." para declarar qual sera o evento
+
+            x = x - taxa;
+
+        }
+    } // fechamento do bloco
+
+    document.onkeydown = leDoTeclado; // document 
+
+</script>
